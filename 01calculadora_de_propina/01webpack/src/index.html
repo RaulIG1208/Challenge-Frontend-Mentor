@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Challenge Calculator app</title>
+</head>
+
+<body>
+  <h1>
+    <b>SPLI</b>
+    <b>TTER</b>
+  </h1>
+  <form class="form-calculator">
+    <section class="section-option">
+      <div class="section section-bill">
+        <label for="amount">Bill</label>
+        <input type="number" name="amount" id="amount" required step="0.01" placeholder="0" title="Don`t be zero">
+      </div>
+      <div class="section section-select-tip">
+        <h4>Select Tip %</h4>
+        <div class="select-porcent">
+          <input type="button" value="5%">
+          <input type="button" value="10%">
+          <input type="button" value="15%">
+          <input type="button" value="25%">
+          <input type="button" value="50%">
+          <input type="submit" value="Custom">
+        </div>
+      </div>
+      <div class="section section-people">
+        <label for="people">Number of People</label>
+        <input type="number" name="people" id="people" required placeholder="0" title="Don`t be zero">
+      </div>
+    </section>
+    <section class="section section-result">
+      <div>
+        <div class="result">
+          <div class="result-detail">
+            <h4>Tip Amount</h4>
+            <small>/ person</small>
+          </div>
+          <input type="text" name="tip-people" id="tip-people" readonly value="$0.00">
+        </div>
+        <div class="result">
+          <div class="result-detail">
+            <h4>Total</h4>
+            <small>/ person</small>
+          </div>
+          <input type="text" name="total-people" id="total-people" readonly value="$0.00">
+        </div>
+      </div>
+      <input type="reset" value="RESET" class="reset" disabled>
+    </section>
+
+  </form>
+
+
+</body>
+
+</html>
