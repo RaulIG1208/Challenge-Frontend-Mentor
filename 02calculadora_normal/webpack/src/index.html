@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <title>Calculator APP</title>
+</head>
+
+<body data-theme>
+  <main>
+    <header>
+      <h1>Calc</h1>
+      <div class="theme">
+        <h3>THEME</h3>
+        <nav>
+          <div class="select-theme">
+            <label for="theme" data-value="1">1</label>
+            <label for="theme" data-value="2">2</label>
+            <label for="theme" data-value="3">3</label>
+          </div>
+          <input type="range" name="theme" id="theme" min="1" max="3" step="1" value="1" data-theme>
+        </nav>
+      </div>
+    </header>
+    <form>
+      <section class="display">
+        <input type="text" name="display" id="display" value="0" readonly data-theme placeholder="0">
+      </section>
+      <section class="options" data-theme>
+        <input type="button" value="7" class="grid-fluid">
+        <input type="button" value="8" class="grid-fluid">
+        <input type="button" value="9" class="grid-fluid">
+        <input type="button" value="DEL" class="grid-fluid">
+        <input type="button" value="4" class="grid-fluid">
+        <input type="button" value="5" class="grid-fluid">
+        <input type="button" value="6" class="grid-fluid">
+        <input type="button" value="+" class="grid-fluid">
+        <input type="button" value="1" class="grid-fluid">
+        <input type="button" value="2" class="grid-fluid">
+        <input type="button" value="3" class="grid-fluid">
+        <input type="button" value="-" class="grid-fluid">
+        <input type="button" value="." class="grid-fluid">
+        <input type="button" value="0" class="grid-fluid">
+        <input type="button" value="/" class="grid-fluid">
+        <input type="button" value="x" class="grid-fluid">
+        <input type="button" value="RESET" class="grid-fluid">
+        <input type="button" value="=" class="grid-fluid">
+      </section>
+    </form>
+  </main>
+</body>
+
+</html>
