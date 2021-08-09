@@ -1,3 +1,18 @@
+:root {
+  --light-red-text: rgb(255, 82, 93);
+  --very-light-red-hover-bg: rgb(255, 122, 133);
+  --very-dark-blue-head: rgb(31, 63, 91);
+  --white: rgb(255, 255, 255);
+  --grayish-blue-footer-text: rgb(200, 200, 203);
+  --grayish-blue-footer-text-op: rgb(200, 200, 203, 0.5);
+  --very-dark-grayish-blue-body: rgb(75, 88, 98);
+  --very-dark-black-blue-footer-background: rgb(37, 37, 45);
+  --very-light-red: rgb(255, 143, 112);
+  --light-red: rgb(255, 61, 84);
+  --very-dark-gray-blue: rgb(44, 45, 63);
+  --very-dark-desaturated-blue: rgb(63, 65, 100);
+}
+/* Reseteo de tamaño de caja, tamaño de letra y y familia de fuente*/
 html {
   box-sizing: border-box;
   font-family: "Overpass", "Ubuntu", sans-serif;
@@ -9,3 +24,479 @@ html {
 *::after {
   box-sizing: inherit;
 }
+/* Aseguro que no se muestre la barra horizontal y otros pequeños detalles*/
+body {
+  background-color: #fff;
+  color: var(--white);
+  margin: 0;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/*Reseteo las etiquetas a  */
+a {
+  text-decoration: none;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  color: var(--very-dark-grayish-blue-body);
+}
+
+/* Establezco estilos basicos para los buttons*/
+button {
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: inherit;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  width: 8rem;
+}
+
+/*Reseteo los figure */
+figure {
+  margin: 0;
+}
+
+/* Establezo margenes para separar el logo de la barra de navegacion */
+h1 {
+  margin: 1rem 1.5rem 1rem 0;
+}
+
+h3 {
+  color: var(--very-dark-blue-head);
+  font-size: 2rem;
+}
+
+h4 {
+  color: var(--very-dark-blue-head);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*Reseteo imagenes para que su tamaño sea el de ssu contenedor*/
+img {
+  width: 100%;
+}
+
+/*Reseteo de main*/
+main {
+  color: var(--very-dark-grayish-blue-body);
+  padding-top: 4rem;
+}
+
+p {
+  line-height: 1.75rem;
+}
+
+li {
+  cursor: pointer;
+}
+
+/* Establezco estilos basicos para las listas*/
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+/* Establezco  el gradiente de bacground y le doy el borde indicado*/
+.body-header {
+  background: linear-gradient(
+    115deg,
+    rgba(255, 143, 112, 1) 0%,
+    rgba(255, 82, 93, 1) 73%,
+    rgba(255, 61, 84, 1) 100%
+  );
+  border-bottom-left-radius: 5rem;
+  min-height: auto;
+  width: 100%;
+}
+/* Esta capa es para agregar el svg y estableser la direccion de las cajas internas */
+.body-header > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("./assets/bg-pattern-intro.svg");
+  background-repeat: no-repeat;
+  background-size: 1300px auto;
+  background-position: 38% 35%;
+  border-bottom-left-radius: 5rem;
+  height: auto;
+}
+
+/* Posiciono relativo para realizar la ventana modal del menu display flex para el posisionamiento de las cajas */
+.header-navbar {
+  position: relative;
+  padding-top: 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* Desaparezco la caja, le doy los estilos y posiciono su contenido con flex*/
+.navbar {
+  opacity: 0;
+  visibility: hidden;
+  max-width: 18rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  width: 18rem;
+  left: 0;
+  right: 0;
+  transform: translate(calc(50vw - 50%), 0);
+  top: 6.5rem;
+}
+
+/* cuando agregue este estilo con JS aparecera la ventana modal */
+.navbar.is-active {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1.5s ease;
+}
+
+.navbar-selects {
+  width: 100%;
+}
+
+.navbar-selects-default-li {
+  margin: 1rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.navbar-select {
+  position: relative;
+}
+
+/*Insercionde arrow*/
+
+.navbar-select::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  top: 0;
+  right: -1rem;
+  background-image: url("assets/icon-arrow-dark.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 0.5rem;
+}
+
+/*Giro de arrow*/
+.dropdawn-menu.is-active .navbar-select::before {
+  transform: rotate(180deg);
+  top: 0.2rem;
+  right: -1.4rem;
+}
+
+.navbar-selects-default-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-select-default {
+  color: var(--very-dark-blue-head);
+  font-size: 1.2rem;
+}
+
+/* desparezco las sub-listas*/
+.product,
+.company,
+.connect {
+  display: block;
+  height: 0;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  padding: 0;
+  background-color: var(--grayish-blue-footer-text-op);
+}
+
+/*las aparezco*/
+.dropdawn-menu.is-active ul {
+  height: auto;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.product li:nth-child(2),
+.product li:nth-child(4) {
+  margin: 1rem auto;
+}
+
+.company li:nth-child(2) {
+  margin: 1rem auto;
+}
+
+.company li:nth-child(4) {
+  margin-top: 1rem;
+}
+
+.connect li:nth-child(2) {
+  margin: 1rem auto;
+}
+
+/* estilos para los buttons de logins  */
+.navbar-logins {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  border-top: thin solid var(--grayish-blue-footer-text-op);
+  align-items: center;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+.login-btn {
+  margin: 0.5rem 1rem;
+  background-color: transparent;
+  color: var(--very-dark-blue-head);
+}
+
+.sing-up-btn {
+  margin: 0.5rem 1rem;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 143, 112, 1) 0%,
+    rgba(255, 82, 93, 1) 73%,
+    rgba(255, 61, 84, 1) 100%
+  );
+  font-family: "Ubuntu";
+  font-weight: bold;
+  color: var(--white);
+}
+
+/*Creo el Botton hamburguer */
+.panel-btn {
+  display: block;
+  padding: 0;
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  background-color: transparent;
+}
+
+.hamburger-box {
+  display: block;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger-box span,
+.hamburger-box::after,
+.hamburger-box::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  border-radius: 0.1rem;
+  background-color: white;
+  content: " ";
+  transition: all 0.2s ease-out;
+  padding: 0.1rem;
+}
+
+.hamburger-box span {
+  top: 1.4rem;
+}
+
+.hamburger-box::after {
+  bottom: 0.8rem;
+}
+
+.hamburger-box::before {
+  top: 0.8rem;
+}
+/*Creo los estilos para que el button hamburguer sea una X este estilo se agrega con JS */
+.is-active.hamburger-box span {
+  background-color: transparent;
+}
+
+.is-active.hamburger-box::before {
+  top: 1.4rem;
+  transform: rotate(45deg);
+}
+
+.is-active.hamburger-box::after {
+  bottom: 1.4rem;
+  transform: rotate(-45deg);
+}
+
+/*Estilos para el Texto ubicado en el header */
+.header-info {
+  margin: 4rem auto;
+  width: 100%;
+  max-width: 60rem;
+}
+
+.header-info-text,
+.header-info-choice {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.header-info-text h2 {
+  font-size: 2.15rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.header-info-text p {
+  color: var(--grayish-blue-footer-text);
+}
+
+/*Estilos para las opciones indicadas en el header */
+.header-info-choice button {
+  margin: 0.4rem;
+  width: 8.5rem;
+}
+
+.header-info-choice button:nth-child(1) {
+  background-color: var(--white);
+  color: var(--light-red-text);
+}
+
+.header-info-choice button:nth-child(1):hover {
+  background-color: rgb(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.header-info-choice button:nth-child(2) {
+  background-color: transparent;
+  border: thin solid var(--white);
+  color: var(--white);
+}
+
+.header-info-choice button:nth-child(2):hover {
+  background-color: var(--white);
+  color: var(--light-red-text);
+}
+/* Estilos que necesito cuando cambie la vista de la pagina*/
+@media screen and (min-width: 64.5rem) {
+  .body-header > div {
+    background-size: 160rem auto;
+    background-position: 28% 53%;
+  }
+
+  a {
+    font-weight: initial;
+  }
+
+  .navbar-select::before {
+    background-image: url("assets/icon-arrow-light.svg");
+  }
+
+  .navbar {
+    max-width: 100%;
+    opacity: 1;
+    visibility: visible;
+    position: initial;
+    padding-left: 2rem;
+    width: auto;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 2;
+    transform: initial;
+  }
+
+  .navbar-selects-ul {
+    flex-direction: row;
+  }
+
+  .navbar-selects-li {
+    text-align: left;
+    width: 115px;
+  }
+
+  .navbar-select:active {
+    text-decoration: underline;
+    color: var(--white);
+  }
+
+  .product,
+  .company,
+  .connect {
+    padding-left: 1rem;
+  }
+
+  .product a:hover,
+  .company a:hover,
+  .connect a:hover {
+    font-weight: bold;
+  }
+
+  .dropdawn-menu.is-active ul {
+    margin: 1rem 0;
+    width: 200px;
+    padding: 2rem 3.5rem 2rem 1rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    text-align: left;
+    font-weight: 300;
+  }
+
+  .navbar-logins {
+    border: none;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  .login-btn,
+  .navbar-select {
+    color: var(--grayish-blue-footer-text);
+    font-weight: bold;
+  }
+
+  .navbar-selects {
+    width: auto;
+  }
+
+  .login-btn:hover {
+    color: var(--white);
+  }
+
+  .sing-up-btn {
+    background: initial;
+    background-color: var(--white);
+    color: var(--light-red-text);
+  }
+
+  .sing-up-btn:hover {
+    color: var(--white);
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
+  .panel-btn {
+    display: none;
+  }
+
+  .header-info {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+}
+
+@import url("section.css");
+@import url("footer.css");

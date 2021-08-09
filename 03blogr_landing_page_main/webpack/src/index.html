@@ -2,16 +2,203 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
   <title>Blogr Landing Page</title>
 </head>
 
 <body>
-  <h1>Blogr Landing Page</h1>
+  <header class="body-header">
+    <div>
+      <nav class="header-navbar">
+        <h1 class="logo">
+          <a href="#">
+            <img alt="Blogr" />
+          </a>
+        </h1>
+        <button class="panel-btn">
+          <span class="hamburger-box">
+            <span></span>
+          </span>
+        </button>
+        <div class="navbar">
+          <div class="navbar-selects navbar-select-default">
+            <ul class="navbar-selects-ul navbar-selects-default-ul">
+              <li class="
+                    navbar-selects-li navbar-selects-default-li
+                    dropdawn-menu
+                  ">
+                <a href="#" class="navbar-select navbar-select-default">Product</a>
+                <ul class="product">
+                  <li><a href="#">Overview</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Marketplace</a></li>
+                  <li><a href="#">Feactures</a></li>
+                  <li><a href="#">Integrations</a></li>
+                </ul>
+              </li>
+              <li class="
+                    navbar-selects-li navbar-selects-default-li
+                    dropdawn-menu
+                  ">
+                <a href="#" class="navbar-select navbar-select-default">Company</a>
+                <ul class="company">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="
+                    navbar-selects-li navbar-selects-default-li
+                    dropdawn-menu
+                  ">
+                <a href="#" class="navbar-select navbar-select-default">Connect</a>
+                <ul class="connect">
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Newsletter</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-logins">
+            <button class="login-btn">Login</button>
+            <button class="sing-up-btn">Sing-Up</button>
+          </div>
+        </div>
+      </nav>
+      <section class="header-info">
+        <div class="header-info-text">
+          <h2>A modern publishing platform</h2>
+          <p>Grow your audience and build your online brand</p>
+        </div>
+        <div class="header-info-choice">
+          <button>Start for Free</button>
+          <button>Learn More</button>
+        </div>
+      </section>
+    </div>
+  </header>
+  <main>
+    <header class="header-main">
+      <h3>Designed for the future</h3>
+    </header>
+    <section class="article-introduc article">
+      <figure class="introduc-img article-img">
+        <img alt="Introducer-img" id="introduc-img" />
+      </figure>
+      <article>
+        <div class="introducer-text article-tex">
+          <h4>Introducing an extensible editor</h4>
+          <p>
+            Blogr features an exceedingly intuitive interface which lets you
+            focus on one thing: creating content. The editor supports
+            management of multiple blogs and allows easy manipulation of
+            embeds such as images, videos, and Markdown. Extensibility with
+            plugins and themes provide easy ways to add functionality or
+            change the looks of a blog.
+          </p>
+        </div>
+        <div class="introducer-text article-tex">
+          <h4>Robust content management</h4>
+          <p>
+            Flexible content management enables users to easily move through
+            posts. Increase the usability of your blog by adding customized
+            categories, sections, format, or flow. With this functionality,
+            you’re in full control
+          </p>
+        </div>
+      </article>
+    </section>
+    <section class="infrastructure">
+      <figure class="infrastructure-img">
+        <img alt="infrastructure" id="infrastructure-img" />
+      </figure>
+      <div class="bg-infrastructure">
+        <div>
+          <article>
+            <h4>State of the Art infrastructure</h4>
+            <p>
+              With reliability and speed in mind, worldwide data centers
+              provide the backbone for ultra-fast connectivity. This ensures
+              your site will load instantly, no matter where your readers are,
+              keeping your site competitive
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="article-final article">
+      <figure class="final-img article-img">
+        <img alt="Final-img" id="final-img" />
+      </figure>
+      <article>
+        <div class="final-text article-tex">
+          <h4>Free, open, simple</h4>
+          <p>
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics.The architecture is clean and is relatively easy to
+            learn.
+          </p>
+        </div>
+        <div class="final-text article-tex">
+          <h4>Powerful tooling</h4>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul class="navbar-selects-footer-ul">
+        <li>
+          <h2 class="logo">
+            <a href="#">
+              <img alt="Blogr" />
+            </a>
+          </h2>
+        </li>
+        <li>
+          <a href="#" class="navbar-title-footer">Product</a>
+          <ul class="footer-product navbar-options-ul">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Feactures</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="navbar-title-footer">Company</a>
+          <ul class="footer-company navbar-options-ul">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="navbar-title-footer">Connect</a>
+          <ul class="footer-connect navbar-options-ul">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 
 </html>
