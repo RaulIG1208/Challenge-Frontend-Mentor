@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+  font-family: "Overpass", "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  color: rgb(75, 88, 98);
+}
+
+button {
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: inherit;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  width: 8rem;
+}
+
+h4 {
+  color: rgb(31, 63, 91);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+}
+
+p {
+  line-height: 1.75rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem auto;
+  text-align: center;
+}

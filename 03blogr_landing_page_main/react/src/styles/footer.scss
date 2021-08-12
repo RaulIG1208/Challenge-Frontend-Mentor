@@ -1,0 +1,60 @@
+$footer-background: rgb(37, 37, 45);
+$footer-text: rgb(200, 200, 203);
+
+footer {
+  margin-top: 4rem;
+  padding: 3rem 1rem;
+  background-color: $footer-background;
+  width: 100%;
+  border-top-right-radius: 5rem;
+
+  & nav {
+    width: 90%;
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & a {
+      font-weight: bold;
+    }
+
+    & h2 {
+      width: 4rem;
+      margin: 0.5rem auto;
+    }
+
+    & ul {
+      display: grid;
+      flex: 2;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1.5rem 0;
+      justify-items: center;
+      justify-content: center;
+
+      & > li {
+        padding: 0;
+        margin-bottom: 0;
+
+        & > a {
+          color: #fff;
+        }
+
+        & ul {
+          margin-top: 1.5rem;
+          display: grid;
+          grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
+          gap: 0.5rem;
+
+          & a {
+            color: $footer-text;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
