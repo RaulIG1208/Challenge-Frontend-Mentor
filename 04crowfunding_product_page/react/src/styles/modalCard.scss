@@ -1,0 +1,102 @@
+$moderate-cyan: hsl(176, 50%, 47%);
+
+.modal-card {
+  padding: 1.5rem;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0px 0px 15px -3px #000000;
+  box-shadow: 0px 0px 15px -3px #000000;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h4,
+    h5 {
+      margin: 0.5rem 0 00.5rem 1rem;
+    }
+
+    h5 {
+      color: $moderate-cyan;
+    }
+
+    input[type="radio"] {
+      border-radius: 50%;
+      margin: 0;
+      border: thin solid #ddd;
+      cursor: pointer;
+      height: 1.75rem;
+      position: relative;
+      width: 1.75rem;
+      --webkit-appearance: none;
+    }
+
+    input[type="radio"]:checked:after {
+      background-color: $moderate-cyan;
+      border-radius: 25px;
+      border: none;
+      content: "";
+      display: block;
+      height: 1rem;
+      left: 21.5%;
+      position: relative;
+      top: 21.5%;
+      width: 1rem;
+    }
+  }
+
+  & p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    strong {
+      color: #000;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    small {
+      padding-top: 0.1rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  & > .pledge {
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-top: thin solid rgb(200, 200, 200);
+
+    & h4 {
+      display: block;
+      text-align: center;
+      margin: 1rem auto;
+      font-weight: 500;
+      color: rgb(122, 122, 122);
+    }
+    & input[type="text"] {
+      display: inline-block;
+      padding: 1rem;
+      width: 40%;
+      height: auto;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 2rem;
+      border: thin solid #ddd;
+      margin: 0 1rem 0 0;
+    }
+
+    & input[type="button"] {
+      margin: auto;
+    }
+  }
+}
+
+.is-active {
+  border: thin solid $moderate-cyan;
+  -webkit-box-shadow: 0px 0px 15px -3px $moderate-cyan;
+  box-shadow: 0px 0px 15px -3px $moderate-cyan;
+}

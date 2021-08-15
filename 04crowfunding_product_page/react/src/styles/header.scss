@@ -1,0 +1,102 @@
+$white: #fff;
+$moderate-cyan: hsl(176, 50%, 47%);
+$dropdown-text: rgba(31, 63, 91, 0.5);
+$footer-text: rgb(200, 200, 203);
+$light-red-text: rgb(255, 82, 93);
+
+.header {
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // align-items: center;
+  display: flex;
+  gap: 0 1rem;
+  justify-content: stretch;
+  align-items: flex-start;
+  background-image: url("../assets/image-hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 77vw;
+}
+
+.navbar {
+  position: relative;
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+
+  & h2 {
+    margin: 0;
+  }
+
+  &-collapse {
+    z-index: 999;
+    position: absolute;
+    padding: 0;
+    border-radius: 0.5rem;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 320px;
+    height: auto;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    & a {
+      padding: 1.2rem 0 1.2rem 1.5rem;
+      min-width: 120px;
+      text-decoration: none;
+      font-family: "Commissioner";
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #000;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:nth-child(2) {
+        border-top: thin solid $footer-text;
+        border-bottom: thin solid $footer-text;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .header {
+    background-image: url("../assets/image-hero-desktop.jpg");
+    height: 28vw;
+  }
+
+  .navbar {
+    &-collapse {
+      max-width: 100%;
+      position: initial;
+      width: auto;
+      background-color: transparent;
+      justify-content: flex-end;
+      align-items: flex-start;
+      flex-direction: row;
+      flex: 2;
+      transform: initial;
+
+      & a {
+        color: $white;
+
+        &:nth-child(2) {
+          border: none;
+        }
+      }
+    }
+  }
+}
